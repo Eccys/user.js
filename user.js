@@ -1,17 +1,17 @@
-//
-/* You may copy+paste this file and use it as it is.
- *
+/*
+
  * If you make changes to your about:config while the program is running, the
  * changes will be overwritten by the user.js when the application restarts.
  *
  * To make lasting changes to preferences, you will have to edit the user.js.
- */
+
+*/
 
 /****************************************************************************
- * Betterfox                                                                *
- * "Ad meliora"                                                             *
+ * user.js                                                                  *
+ * "Ad peiora"                                                              *
  * version: 126                                                             *
- * url: https://github.com/yokoffing/Betterfox                              *
+ * url: https://github.com/eccys/user.js                                    *
 ****************************************************************************/
 
 /****************************************************************************
@@ -19,6 +19,9 @@
 ****************************************************************************/
 /** GENERAL ***/
 user_pref("content.notify.interval", 100000);
+
+user_pref("accessibility.force_disabled", 1); // Prevent accessibility services from accessing your browser and using RAM (1=always off)
+user_pref("dom.ipc.processPriorityManager.backgroundUsesEcoQoS", false); // disable Efficiency Mode (throttling) for background Firefox processes in Windows 11
 
 /** GFX ***/
 user_pref("gfx.canvas.accelerated.cache-items", 4096);
@@ -66,160 +69,6 @@ user_pref("urlclassifier.features.socialtracking.skipURLs", "*.instagram.com, *.
 user_pref("network.cookie.sameSite.noneRequiresSecure", true);
 user_pref("browser.download.start_downloads_in_tmp_dir", true);
 user_pref("browser.helperApps.deleteTempFileOnExit", true);
-user_pref("browser.uitour.enabled", false);
-user_pref("privacy.globalprivacycontrol.enabled", true);
-
-/** OCSP & CERTS / HPKP ***/
-user_pref("security.OCSP.enabled", 0);
-user_pref("security.remote_settings.crlite_filters.enabled", true);
-user_pref("security.pki.crlite_mode", 2);
-
-/** SSL / TLS ***/
-user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
-user_pref("browser.xul.error_pages.expert_bad_cert", true);
-user_pref("security.tls.enable_0rtt_data", false);
-
-/** DISK AVOIDANCE ***/
-user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
-user_pref("browser.sessionstore.interval", 60000);
-
-/** SHUTDOWN & SANITIZING ***/
-user_pref("privacy.history.custom", true);
-
-/** SEARCH / URL BAR ***/
-user_pref("browser.search.separatePrivateDefault.ui.enabled", true);
-user_pref("browser.urlbar.update2.engineAliasRefresh", true);
-user_pref("browser.search.suggest.enabled", false);
-user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
-user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false);
-user_pref("browser.formfill.enable", false);
-user_pref("security.insecure_connection_text.enabled", true);
-user_pref("security.insecure_connection_text.pbmode.enabled", true);
-user_pref("network.IDN_show_punycode", true);
-
-/** HTTPS-FIRST POLICY ***/
-user_pref("dom.security.https_first", true);
-user_pref("dom.security.https_first_schemeless", true);
-
-/** PASSWORDS ***/
-user_pref("signon.formlessCapture.enabled", false);
-user_pref("signon.privateBrowsingCapture.enabled", false);
-user_pref("network.auth.subresource-http-auth-allow", 1);
-user_pref("editor.truncate_user_pastes", false);
-
-/** MIXED CONTENT + CROSS-SITE ***/
-user_pref("security.mixed_content.block_display_content", true);
-user_pref("security.mixed_content.upgrade_display_content", true);
-user_pref("security.mixed_content.upgrade_display_content.image", true);
-user_pref("pdfjs.enableScripting", false);
-user_pref("extensions.postDownloadThirdPartyPrompt", false);
-
-/** HEADERS / REFERERS ***/
-user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
-
-/** CONTAINERS ***/
-user_pref("privacy.userContext.ui.enabled", true);
-
-/** WEBRTC ***/
-user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true);
-user_pref("media.peerconnection.ice.default_address_only", true);
-
-/** SAFE BROWSING ***/
-user_pref("browser.safebrowsing.downloads.remote.enabled", false);
-
-/** MOZILLA ***/
-user_pref("permissions.default.desktop-notification", 2);
-user_pref("permissions.default.geo", 2);
-user_pref("geo.provider.network.url", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
-user_pref("permissions.manager.defaultsUrl", "");
-user_pref("webchannel.allowObject.urlWhitelist", "");
-
-/** TELEMETRY ***/
-user_pref("datareporting.policy.dataSubmissionEnabled", false);
-user_pref("datareporting.healthreport.uploadEnabled", false);
-user_pref("toolkit.telemetry.unified", false);
-user_pref("toolkit.telemetry.enabled", false);
-user_pref("toolkit.telemetry.server", "data:,");
-user_pref("toolkit.telemetry.archive.enabled", false);
-user_pref("toolkit.telemetry.newProfilePing.enabled", false);
-user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
-user_pref("toolkit.telemetry.updatePing.enabled", false);
-user_pref("toolkit.telemetry.bhrPing.enabled", false);
-user_pref("toolkit.telemetry.firstShutdownPing.enabled", false);
-user_pref("toolkit.telemetry.coverage.opt-out", true);
-user_pref("toolkit.coverage.opt-out", true);
-user_pref("toolkit.coverage.endpoint.base", "");
-user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
-user_pref("browser.newtabpage.activity-stream.telemetry", false);
-
-/** EXPERIMENTS ***/
-user_pref("app.shield.optoutstudies.enabled", false);
-user_pref("app.normandy.enabled", false);
-user_pref("app.normandy.api_url", "");
-
-/** CRASH REPORTS ***/
-user_pref("breakpad.reportURL", "");
-user_pref("browser.tabs.crashReporting.sendReport", false);
-user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", false);
-
-/** DETECTION ***/
-user_pref("captivedetect.canonicalURL", "");
-user_pref("network.captive-portal-service.enabled", false);
-user_pref("network.connectivity-service.enabled", false);
-
-/****************************************************************************
- * SECTION: PESKYFOX                                                        *
-****************************************************************************/
-/** MOZILLA UI ***/
-user_pref("browser.privatebrowsing.vpnpromourl", "");
-user_pref("extensions.getAddons.showPane", false);
-user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
-user_pref("browser.discovery.enabled", false);
-user_pref("browser.shell.checkDefaultBrowser", false);
-user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
-user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
-user_pref("browser.preferences.moreFromMozilla", false);
-user_pref("browser.tabs.tabmanager.enabled", false);
-user_pref("browser.aboutConfig.showWarning", false);
-user_pref("browser.aboutwelcome.enabled", false);
-
-/** THEME ADJUSTMENTS ***/
-user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
-user_pref("browser.compactmode.show", true);
-user_pref("browser.display.focus_ring_on_anything", true);
-user_pref("browser.display.focus_ring_style", 0);
-user_pref("browser.display.focus_ring_width", 0);
-user_pref("layout.css.prefers-color-scheme.content-override", 2);
-user_pref("browser.privateWindowSeparation.enabled", false); // WINDOWS
-
-/** COOKIE BANNER HANDLING ***/
-user_pref("cookiebanners.service.mode", 1);
-user_pref("cookiebanners.service.mode.privateBrowsing", 1);
-
-/** FULLSCREEN NOTICE ***/
-user_pref("full-screen-api.transition-duration.enter", "0 0");
-user_pref("full-screen-api.transition-duration.leave", "0 0");
-user_pref("full-screen-api.warning.delay", -1);
-user_pref("full-screen-api.warning.timeout", 0);
-
-/** URL BAR ***/
-user_pref("browser.urlbar.suggest.calculator", true);
-user_pref("browser.urlbar.unitConversion.enabled", true);
-user_pref("browser.urlbar.trending.featureGate", false);
-
-/** NEW TAB PAGE ***/
-user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
-user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
-
-/** POCKET ***/
-user_pref("extensions.pocket.enabled", false);
-
-/** NO LOCATION ***/
-user_pref("geo.enabled", false);
-
-/** RANDOM ***/
-user_pref("beacon.enabled", false);
-user_pref("dom.event.clipboardevents.enabled", false);
 user_pref("dom.battery.enabled", false);
 user_pref("dom.battery.enabled", false);
 user_pref("browser.safebrowsing.phishing.enabled", false);
@@ -242,11 +91,19 @@ user_pref("findbar.highlightAll", true);
 user_pref("layout.word_select.eat_space_to_next_word", false);
 
 /****************************************************************************
- * START: MY OVERRIDES                                                      *
+ * START: PERSONAL OVERRIDES                                                *
 ****************************************************************************/
-// visit https://github.com/yokoffing/Betterfox/wiki/Common-Overrides
-// visit https://github.com/yokoffing/Betterfox/wiki/Optional-Hardening
 // Enter your personal overrides below this line:
+
+// PREF: disable highlighting space next to word when highlighting
+user_pref("layout.word_select.eat_space_to_next_word", false);
+
+// PREF: disable backspace back page
+user_pref("browser.backspace_action", 1);
+
+// PREF: lenient zoom percentages
+user_pref("zoom.maxPercent", 400);
+user_pref("zoom.minPercent", 10);
 
 // PREF: delete all browsing data on shutdown
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);
@@ -262,19 +119,17 @@ user_pref("privacy.clearOnShutdown.siteSettings", true);
 // scrollbar positions, and POST data after crashes or restarts
 user_pref("browser.sessionstore.privacy_level", 1);
 
+// PREF: don't restore login manager
+user_pref("signon.rememberSignons", false);
 
-
-// PREF: restore login manager
-user_pref("signon.rememberSignons", true);
-
-// PREF: restore address and credit card manager
+// PREF: don't restore address and credit card manager
 user_pref("extensions.formautofill.addresses.enabled", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
 
-// PREF: allow websites to ask you for your location
+// PREF: don't allow websites to ask you for your location
 user_pref("permissions.default.geo", 0);
 
-// PREF: allow websites to ask you to receive site notifications
+// PREF: don't allow websites to ask you to receive site notifications
 user_pref("permissions.default.desktop-notification", 0);
 
 // PREF: restore Top Sites on New Tab page
@@ -298,12 +153,28 @@ user_pref("privacy.userContext.enabled", true);
 
 // PREF: enable GPU-accelerated Canvas2D [WINDOWS]
 user_pref("gfx.canvas.accelerated", true);
+
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
 ****************************************************************************/
-// visit https://github.com/yokoffing/Betterfox/blob/main/Smoothfox.js
-// Enter your scrolling overrides below this line:
+
+/****************************************************************************************
+ * OPTION: NATURAL SMOOTH SCROLLING V3 [MODIFIED]                                      *
+****************************************************************************************/
+// largely matches Chrome flags: Windows Scrolling Personality and Smooth Scrolling
+user_pref("apz.overscroll.enabled", true); // DEFAULT NON-LINUX
+user_pref("general.smoothScroll", true); // DEFAULT
+user_pref("general.smoothScroll.msdPhysics.continuousMotionMaxDeltaMS", 12);
+user_pref("general.smoothScroll.msdPhysics.enabled", true);
+user_pref("general.smoothScroll.msdPhysics.motionBeginSpringConstant", 600);
+user_pref("general.smoothScroll.msdPhysics.regularSpringConstant", 650);
+user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaMS", 25);
+user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaRatio", "2");
+user_pref("general.smoothScroll.msdPhysics.slowdownSpringConstant", 250);
+user_pref("general.smoothScroll.currentVelocityWeighting", "1");
+user_pref("general.smoothScroll.stopDecelerationWeighting", "1");
+user_pref("mousewheel.default.delta_multiplier_y", 300); // 250-400; adjust this number to your liking
 
 /****************************************************************************
- * END: BETTERFOX                                                           *
+ * END: user.js                                                             *
 ****************************************************************************/
