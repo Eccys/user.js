@@ -1,6 +1,6 @@
 # `user.js`
 
-about:config tweaks to enhance Firefox.
+Tweaking `about:config` to enhance/[harden](https://brainfucksec.github.io/firefox-hardening-guide) Firefox.
 
 31% faster according to [Speedometer 3.0](https://browserbench.org/Speedometer3.0/).
 
@@ -16,32 +16,29 @@ curl -O https://raw.githubusercontent.com/Eccys/user.js/main/user.js
 It's recommended to use [uBlock Origin](https://ublockorigin.com/) alongside this.
 
 ## Sections
-- **FASTFOX (Performance Enhancements)**:
+The user.js is divided into subcategories to make editing and revising it easier. You're welcome 💝
+### **FASTFOX (Performance Enhancements)**:
 
-Prioritizes speed by adjusting cache sizes, image rendering, and network connections.
+Prioritizes speed by adjusting cache sizes, image rendering, and network connections. Enables GPU-accelerated rendering and limits prefetching to reduce unnecessary data use.
 
-Enables GPU-accelerated rendering and limits prefetching to reduce unnecessary data use.
+### **SECUREFOX (Privacy & Security)**:
 
-- **SECUREFOX (Privacy & Security)**: 
-Blocks tracking and prioritize HTTPS connections.
+Blocks tracking and prioritizes HTTPS connections. Disables telemetry and data collection features, including safe browsing and crash reporting and enforces stricter cookie management and blocking mixed content.
 
-Disables telemetry and data collection features, including safe browsing and crash reporting and enforces stricter cookie management and blocking mixed content.
+### **PESKYFOX (Interface Clean-Up)**:
 
-- **PESKYFOX (Interface Clean-Up)**: 
-Removes unwanted Mozilla UI elements, disables location tracking and notifications, and removes [Pocket](https://www.mozilla.org/en-US/firefox/pocket/) and sponsored content on new tabs.
-Minimalize the interface, minimize interruptions, and disable unnecessary "features".
+Removes unwanted Mozilla UI elements, disables location tracking and notifications, and removes [Pocket](https://www.mozilla.org/en-US/firefox/pocket/) and other sponsored content on new tabs.
 
-- **Custom Overrides**:
-Contains personal preference settings, such as clearing browsing data on shutdown, disabling auto-form fill, enabling container tabs, and setting site-specific permissions.
+### **Custom Overrides**:
 
-_Note: Feel free to go through the **custom overrides** section and adjust it according to your needs!_
+Contains personal settings, such as clearing browsing data on shutdown, disabling auto-form fill, enabling container tabs, and site-specific permissions.
 
-**By default, all site settings and history are wiped on exit.**
+Please, go through this section and adjust it according to your needs.
 
 ## Goals
 
 1. **Minimalism**: get what isn't needed out of the way.
 2. **Efficiency**: unleash Firefox's ability to be fast and performant.
-3 **Privacy**: protect your data without causing site breakage.
+3. **Privacy**: protect your data without causing site breakage.
 
 Inspired by [Betterfox](https://github.com/yokoffing/Betterfox).
