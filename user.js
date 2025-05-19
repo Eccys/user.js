@@ -1,4 +1,6 @@
-/*
+//
+
+/* You may copy+paste this file and use it as it is.
 
  * If you make changes to your about:config while the program is running, the
  * changes will be overwritten by the user.js when the application restarts.
@@ -129,6 +131,11 @@ user_pref("extensions.formautofill.creditCards.enabled", false);
 // PREF: don't allow websites to ask you for your location
 user_pref("permissions.default.geo", 0);
 
+// PREF: disable geolocation
+user_pref("geo.enabled", 0);
+user_pref("geo.prompt.open_system_prefs", 0);
+user_pref("geo.provider.geoclue.always_high_accuracy", 0);
+
 // PREF: don't allow websites to ask you to receive site notifications
 user_pref("permissions.default.desktop-notification", 0);
 
@@ -147,6 +154,7 @@ user_pref("browser.newtabpage.activity-stream.default.sites", "");
 
 // PREF: restore search engine suggestions
 user_pref("browser.search.suggest.enabled", false);
+user_pref("browser.search.suggest.recentsearches", false);
 
 // PREF: enable container tabs
 user_pref("privacy.userContext.enabled", true);
@@ -178,3 +186,6 @@ user_pref("mousewheel.default.delta_multiplier_y", 300); // 250-400; adjust this
 /****************************************************************************
  * END: user.js                                                             *
 ****************************************************************************/
+
+
+
