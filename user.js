@@ -50,11 +50,11 @@ user_pref("network.dnsCacheExpiration", 3600);
 user_pref("network.ssl_tokens_cache_capacity", 10240);
 
 /** SPECULATIVE LOADING ***/
-user_pref("network.dns.disablePrefetch", true);
-user_pref("network.dns.disablePrefetchFromHTTPS", true);
-user_pref("network.prefetch-next", false);
-user_pref("network.predictor.enabled", false);
-user_pref("network.predictor.enable-prefetch", false);
+// user_pref("network.dns.disablePrefetch", true);
+// user_pref("network.dns.disablePrefetchFromHTTPS", true);
+// user_pref("network.prefetch-next", false);
+// user_pref("network.predictor.enabled", false);
+// user_pref("network.predictor.enable-prefetch", false);
 
 /** EXPERIMENTAL ***/
 user_pref("layout.css.grid-template-masonry-value.enabled", true);
@@ -65,7 +65,7 @@ user_pref("dom.security.sanitizer.enabled", true);
  * SECTION: SECUREFOX                                                       *
 ****************************************************************************/
 /** TRACKING PROTECTION ***/
-user_pref("browser.contentblocking.category", "strict");
+// user_pref("browser.contentblocking.category", "strict");
 user_pref("urlclassifier.trackingSkipURLs", "*.reddit.com, *.twitter.com, *.twimg.com, *.tiktok.com");
 user_pref("urlclassifier.features.socialtracking.skipURLs", "*.instagram.com, *.twitter.com, *.twimg.com");
 user_pref("network.cookie.sameSite.noneRequiresSecure", true);
@@ -76,8 +76,7 @@ user_pref("dom.battery.enabled", false);
 user_pref("browser.safebrowsing.phishing.enabled", false);
 user_pref("browser.safebrowsing.malware.enabled", false);
 user_pref("media.navigator.enabled", false);
-user_pref("beacon.enabled", false);
-user_pref("beacon.enabled", false);
+// user_pref("beacon.enabled", false);
 
 /** DOWNLOADS ***/
 user_pref("browser.download.always_ask_before_handling_new_types", true);
@@ -186,6 +185,5 @@ user_pref("mousewheel.default.delta_multiplier_y", 300); // 250-400; adjust this
 /****************************************************************************
  * END: user.js                                                             *
 ****************************************************************************/
-
 
 
