@@ -136,7 +136,7 @@ user_pref("geo.prompt.open_system_prefs", 0);
 user_pref("geo.provider.geoclue.always_high_accuracy", 0);
 
 // PREF: don't allow websites to ask you to receive site notifications
-user_pref("permissions.default.desktop-notification", 0);
+user_pref("permissions.default.desktop-notification", 1);
 
 // PREF: restore Top Sites on New Tab page
 user_pref("browser.newtabpage.activity-stream.feeds.topsites", false); // Shortcuts
@@ -185,5 +185,3 @@ user_pref("mousewheel.default.delta_multiplier_y", 300); // 250-400; adjust this
 /****************************************************************************
  * END: user.js                                                             *
 ****************************************************************************/
-
-
